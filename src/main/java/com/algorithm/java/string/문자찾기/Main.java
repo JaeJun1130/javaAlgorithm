@@ -1,4 +1,4 @@
-package com.algorithm.java.문자찾기;
+package com.algorithm.java.string.문자찾기;
 
 import java.util.Scanner;
 

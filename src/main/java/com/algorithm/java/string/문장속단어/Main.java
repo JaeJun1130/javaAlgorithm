@@ -1,4 +1,4 @@
-package com.algorithm.java.문장속단어;
+package com.algorithm.java.string.문장속단어;
 
 import java.util.Scanner;
 
@@ -22,7 +22,7 @@ public class Main {
         return answer;
     }
 
-    /** 
+    /**
      * indexOf, SubString()
      */
     public static void main(String[] args) {

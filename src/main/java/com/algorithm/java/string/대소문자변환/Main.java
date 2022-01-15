@@ -1,4 +1,4 @@
-package com.algorithm.java.대소문자변환;
+package com.algorithm.java.string.대소문자변환;
 
 import java.util.Scanner;
 
