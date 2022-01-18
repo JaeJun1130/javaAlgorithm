@@ -2,31 +2,35 @@ package com.algorithm.java.string.가장짧은문자거리;
 
 import java.util.Scanner;
 
+/**
+ * 오른쪽으로 한번 쭉 탐색후 왼쪽으로 탐색해서 작은수 비교
+ */
 public class Main {
-    public int[]  solution(String str, char c) {
-        int N = str.length();
-        int[] answer = new int[N];
-        int P = 1000;
+        public int[]  solution(String str, char c){
+            int N = str.length();
+            int[] answer = new int[N];
+            int P = 1000;
 
-        for(int i=0; i<N; i++){
-            if(str.charAt(i) == c) {
-                P = 0;
-                answer[i] = P;
-            }else {
-                P++;
-                answer[i] = P;
+            for (int i = 0; i < N; i++) {
+                if (str.charAt(i) == c) {
+                    P = 0;
+                    answer[i] = P;
+                } else {
+                    P++;
+                    answer[i] = P;
+                }
             }
-        }
-        P=1000;
-        for(int i=N-1; i>=0; i--){
-            if(str.charAt(i) == c) {
-                P = 0;
-                answer[i] = P;
-            }else {
-                P++;
-                answer[i] = Math.min(answer[i],P);
+
+            P = 1000;
+            for (int i = N - 1; i >= 0; i--) {
+                if (str.charAt(i) == c) {
+                    P = 0;
+                    answer[i] = P;
+                } else {
+                    P++;
+                    answer[i] = Math.min(answer[i], P);
+                }
             }
-        }
         return answer;
     }
 
